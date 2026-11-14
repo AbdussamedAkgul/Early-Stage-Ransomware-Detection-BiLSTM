@@ -1,0 +1,10 @@
+{
+  "accuracy": 0.9763333333333334,
+  "precision": 0.9887024991441288,
+  "recall": 0.987012987012987,
+  "f1_score": 0.9878570206943732,
+  "roc_auc": 0.9459482551587814,
+  "total_test_samples": 3000,
+  "malware_test_count": 2926,
+  "benign_test_count": 74
+}
