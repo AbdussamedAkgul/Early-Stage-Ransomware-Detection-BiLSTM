@@ -1,7 +1,7 @@
 # Windows API Çağrı Dizilerinin Zaman Serisi Derin Öğrenme Modeli ile Analizi ve Erken Aşama Fidye Yazılımı Tespiti
 ### Analysis of Windows API Call Sequences with Time-Series Deep Learning for Early-Stage Ransomware Detection
 
----
+----
 
 ## 🇹🇷 Proje Özeti (Turkish)
 
@@ -20,7 +20,7 @@ Geleneksel imza tabanlı antivirüs yazılımları, polimorfik ve daha önce kar
 4. **Eğitim Optimizasyonu:** `Adam` optimizer, `binary_crossentropy` kayıp fonksiyonu, erken durdurma `EarlyStopping(patience=5)` ve öğrenme oranı düşürme `ReduceLROnPlateau`.
 5. **Erken Aşama Analizi:** API dizisinin henüz 10. ve 20. çağrılarında (keşif, yetki yükseltme ve kripto bağlamı oluşturulurken) alarm üreterek dosya tahribatı başlamadan zararlıyı durdurma kabiliyeti.
 
----
+----
 
 ## 🇬🇧 Project Overview (English)
 
@@ -33,7 +33,7 @@ Traditional signature-based antivirus solutions struggle against polymorphic and
 - **Training Protocol:** Adam optimizer, Binary Crossentropy, Class Weight Balancing, `EarlyStopping(patience=5)` and `ReduceLROnPlateau`.
 - **Early-Stage Detection:** Proven threat alerting as early as $t=10$ to $t=20$ API calls during initial reconnaissance and cryptographic key initialization.
 
----
+----
 
 ## 🏗️ Sistem Mimarisi & İşleyiş Diyagramı / System Architecture
 
@@ -63,7 +63,7 @@ Sistemin uçtan uca veri akışı ve derin öğrenme katmanları:
 [Early Warning Engine] -> Alert triggered at t=10..30 API calls (Pre-Encryption Kill)
 ```
 
----
+----
 
 ## 📊 Performans ve Test Metrikleri / Performance Benchmark
 
@@ -88,7 +88,7 @@ Stratified %20 test kümesi üzerinde elde edilen nihai doğrulama sonuçları:
 4. **Mimari Blok Diyagramı (`outputs/architecture_diagram.png`):**
    - Veri akışını, parametre boyutlarını ve erken uyarı mekanizmasını detaylandıran temiz şematik diyagram.
 
----
+----
 
 ## ⏱️ Erken Aşama Tespit Analizi / Early-Stage Timeline Evaluation
 
@@ -120,7 +120,7 @@ Fidye yazılımları tipik olarak şu fazları takip eder:
 
 > **Güvenlik Çıkarımı:** Sistem, dosya şifreleme API'leri çağrılmadan önce ($t=10$) %81.40 olasılıkla alarm üreterek EDR/XDR sistemlerinin süreci derhal sonlandırmasını (PID termination) ve VSS gölge kopyalarını korumasını mümkün kılar.
 
----
+----
 
 ## 📁 Proje Klasör Yapısı / Project Directory Layout
 
@@ -145,7 +145,7 @@ ransomware_api_detection/
 └── README.md                                               # Proje dokümantasyonu (TR/EN)
 ```
 
----
+----
 
 ## 🚀 Kurulum ve Çalıştırma / Installation & Usage
 
@@ -194,7 +194,7 @@ python predict.py --sequence "112,274,158,215,76,208,172,117,35,60,81" --early-e
 python predict.py --api-names "RegOpenKeyExW, CreateFileW, CryptAcquireContextW, CryptGenKey, CryptEncrypt, WriteFile, DeleteFileW" --early-eval
 ```
 
----
+----
 
 ## 📄 Lisans ve Atıf / License & Citation
 Bu proje araştırma ve eğitim amaçlı hazırlanmıştır.
